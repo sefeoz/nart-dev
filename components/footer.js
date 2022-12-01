@@ -30,7 +30,7 @@ export default function Footer(){
                     <div>
 
 
-                    {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
+                    {isAuthenticated ? <div className="flex flex-col  items-center mt-5 space-y-3 ">
                         <img src={user.picture} className="rounded-full" width="40" />
                         <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
                         <button typeof="button"
@@ -41,7 +41,7 @@ export default function Footer(){
                         </button>
                     </div>:<div className="mt-5 text-center">
                         <button typeof="button"
-                                className="text-white text-xl font-thin hover:bg-nav-green px-5 py-2 rounded-full hover:text-back-blue transition "
+                                className="text-gray-300 text-xl font-thin hover:bg-nav-green px-5 py-2 rounded-full hover:text-back-blue transition "
                                 onClick={() => loginWithRedirect()}>
                             Kayıt Ol
                         </button>
