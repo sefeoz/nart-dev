@@ -1,3 +1,5 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +12,11 @@
     .site-4xl-container {
         @apply max-w-4xl mx-auto
     }
+    .site-6xl-container{
+        @apply max-w-6xl mx-auto
+    }
     html{
-        @apply bg-back-blue
+        background-image: url("/hero-bg.png");
+        @apply bg-back-blue bg-no-repeat bg-right-top
     }
 }
