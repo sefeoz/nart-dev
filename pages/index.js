@@ -9,8 +9,6 @@ function Homepage(){
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        centerPadding: '90px',
-        centerMode : true,
         autoplay:true,
         autoplaySpeed: 3000,
         slidesToScroll: 1,
@@ -131,7 +129,13 @@ function Homepage(){
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Baha Nart Şenel</p>
                         <p className={"text-xl"}>Team Leader</p>
-                        <a className={"text-xl"} href=""> @bahanart1</a>
+                        <a className={"text-xl"} href="">@bahanart1</a>
+                    </div>
+                    <div className="text-white text-center rounded-xl py-6 mt-5  ">
+                        <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
+                        <p className="text-3xl font-bold mb-5">Şadan Efe Öz</p>
+                        <p className={"text-xl"}>Team Leader</p>
+                        <a className={"text-xl"} href="">@sefeoz</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/119/300/300/" alt=""/>
