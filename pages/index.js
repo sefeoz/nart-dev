@@ -7,6 +7,7 @@ function Homepage(){
     var settings = {
         dots: true,
         infinite: true,
+        onpause:true,
         speed: 500,
         slidesToShow: 3,
         autoplay:true,
@@ -33,7 +34,7 @@ function Homepage(){
                     <p className="text-white font-light lg:py-5 py-2">Sizlere Özel Hizmet ile Nart Developer Her Zaman
                         Yanınzda!</p>
                     <div>
-                        <Link href={"/"}>
+                        <Link href={"/order"}>
                             <button className="w-4/5 text-black font-bold bg-nav-green py-5 shadow-xl rounded-full hover:bg-white hover:text-nav-green transition">Özel Sipariş</button>
                     </Link>
                     </div>
