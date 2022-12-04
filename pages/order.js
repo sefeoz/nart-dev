@@ -1,10 +1,31 @@
 import {useAuth0} from "@auth0/auth0-react";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import Link from "next/link";
 export default function Order(){
-    const { loginWithRedirect,logout,isAuthenticated,user} = useAuth0();
-    const onSubmit = (e)=>{
+    const { loginWithRedirect,logout,isAuthenticated,user,getAccessTokenSilently} = useAuth0();
+    const [text,textSet] = useState("");
+    const [url,urlSet] = useState("null");
+    const [email,emailSet] = useState("");
+    useEffect(()=>{
+        const url = window.location.href;
+        console.log(url);
+        urlSet(url);
+        console.log(window)
+    },[])
+    const onSubmit = async (e)=>{
         e.preventDefault();
-
+        alert("Siparişinizi Aldık \n" +
+            "En yakın zamanda sizinle iletişime geçeceğiz.");
+        window.location.replace("https://nartdeveloper.com")
+        const usertoken = await getAccessTokenSilently();
+        const response = await fetch("/api/comment",{
+            method :"POST",
+            body: JSON.stringify({text,usertoken,url,email}),
+            headers:{
+                "Content-Type":"application/json",
+            }
+        })
+        const data = await response.json();
     }
     return (
         <div className={"bg-gray-200 bg-opacity-70"}>
@@ -12,27 +33,45 @@ export default function Order(){
                 <h1 className="text-5xl font-bold text-center text-gray-800">Özel Sipariş</h1>
                     <h1 className="text-3xl text-center text-gray-600 mt-6 font-extralight">Bize açık ve net bir şekilde hayallerinizden bahsedin. Bizde sizin için bunu sanal ortama taşıyalım.</h1>
                 <div>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} className="mt-6">
+                        <div className={"flex flex-col"}>
+                            <h1 className="text-center text-gray-600 text-xl mb-4">Size ulaşabilmemiz için Email Adresinizi giriniz.</h1>
+                        <input type="email" className={"text-zinc-200 text-lg p-4 h-12 bg-zinc-900 bg-opacity-60 rounded-lg border border-nav-green"} onChange={(e)=>emailSet(e.target.value)}/>
+                        </div>
+                        <div className={"flex flex-col items-center mt-10"}>
+                            <h1 className={"text-xl text-gray-600 mb-4"}>Bize Hayallerinizden açık ve anlaşılır bir şekilde bahsedin.</h1>
             <textarea rows="4"
-                      className="border border-dark-blue w-full bg-zinc-900 bg-opacity-60 rounded-lg text-zinc-200 text-lg"
+                      className="border border-nav-green w-full p-4 bg-zinc-900 bg-opacity-60 rounded-lg text-zinc-200 text-lg"
+                      onChange={(e)=>textSet(e.target.value)}
+                      value={text}
             />
-                        {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
-                            <img src={user.picture} className="rounded-full" width="40" />
-                            <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
+                        </div>
+                        {isAuthenticated ? <div className="flex justify-between items-center mt-4">
                             <button typeof="button"
-                                    className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
-                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
-                                    onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
-                                Çıkış
+                             className="bg-blue-600 text-white px-5 py-2 text-lg rounded
+                hover:bg-inherit hover:text-blue-600 ease-in-out duration-200">
+                                Send
                             </button>
-                        </div>:<div className="mx-auto">
+                            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+                                <img src={user.picture} width={30} className="rounded-full"  />
+                                <span className="font-semibold text-lg text-gray-200">{user.name}</span>
+                                <button typeof="button"
+                                        className="flex rounded bg-red-500 lato px-5 py-2 font-semibold
+                                hover:bg-inherit hover:text-red-500 text-lg ease-in-out duration-200"
+                                        onClick={() => logout({returnTo:"http://localhost:3000/"})}>
+                                    Log Out
+                                </button>
+                            </div>
+                        </div>:<div className="flex justify-end my-4">
+
                             <button typeof="button"
-                                    className="rounded bg-nav-green px-5 py-2 font-semibold lato text-back-blue
-                                hover:bg-inherit hover:text-nav-green text-lg md:text-[1rem] ease-in-out duration-200"
+                                    className="rounded bg-green-500 px-5 lato py-2 font-semibold
+                                hover:bg-inherit hover:text-green-500 text-lg ease-in-out duration-200"
                                     onClick={() => loginWithRedirect()}>
-                                Kayıt Ol
+                                Log In
                             </button>
-                        </div>}
+                        </div>
+                        }
                     </form>
                 </div>
             </div>
