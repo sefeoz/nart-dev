@@ -10,13 +10,21 @@ export default function Order(){
         const url = window.location.href;
         console.log(url);
         urlSet(url);
-        console.log(window)
     },[])
     const onSubmit = async (e)=>{
         e.preventDefault();
-        alert("Siparişinizi Aldık \n" +
-            "En yakın zamanda sizinle iletişime geçeceğiz.");
-        window.location.replace("https://nartdeveloper.com")
+        if (!isAuthenticated){
+            alert("Giriş Yapınız")
+        }else{
+            if (!url || !text || !email){
+                alert("Hatalı ya da eksik bilgi")
+            }else{
+                alert("Siparişinizi Aldık\n En Kısa Sürede Email Adresinizden Size Ulaşacağız");
+                window.location.replace("https://www.nartdeveloper.com/")
+            }
+        }
+
+
         const usertoken = await getAccessTokenSilently();
         const response = await fetch("/api/comment",{
             method :"POST",
@@ -46,12 +54,17 @@ export default function Order(){
                       value={text}
             />
                         </div>
-                        {isAuthenticated ? <div className="flex justify-between items-center mt-4">
+                        <div className="flex justify-center">
+
                             <button typeof="button"
                              className="bg-blue-600 text-white px-5 py-2 text-lg rounded
-                hover:bg-inherit hover:text-blue-600 ease-in-out duration-200">
+                hover:bg-inherit hover:text-blue-600 ease-in-out duration-200 mt-10">
                                 Send
                             </button>
+                        </div>
+                    </form>
+                    <div className="flex justify-center">
+                        {isAuthenticated ? <div className="flex justify-between items-center mt-4">
                             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                                 <img src={user.picture} width={30} className="rounded-full"  />
                                 <span className="font-semibold text-lg text-gray-200">{user.name}</span>
@@ -64,7 +77,7 @@ export default function Order(){
                             </div>
                         </div>:<div className="flex justify-end my-4">
 
-                            <button typeof="submit"
+                            <button typeof="button"
                                     className="rounded bg-green-500 px-5 lato py-2 font-semibold
                                 hover:bg-inherit hover:text-green-500 text-lg ease-in-out duration-200"
                                     onClick={() => loginWithRedirect()}>
@@ -72,7 +85,7 @@ export default function Order(){
                             </button>
                         </div>
                         }
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

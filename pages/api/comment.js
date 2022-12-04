@@ -6,7 +6,9 @@ export default async function handler(req,res){
     //CREATE
     if (req.method === "POST"){
         const{usertoken,email,url,text}=req.body
-        if (!url ||!usertoken || !text || !email) return res.status(400).json({message: "Parametreler Eksik Ya Da Hatalı"});
+        if (!url ||!usertoken || !text || !email){
+        return res.status(400).json({message: "Parametreler Eksik Ya Da Hatalı"});
+        }
         const userResponse = await fetch(`http://dev-k32gu9l5.us.auth0.com/userinfo`,{
             headers:{
                 "Content-Type":"application/json",
@@ -15,7 +17,6 @@ export default async function handler(req,res){
             }
         })
         const user = await userResponse.json();
-        console.log(user.email)
         const comment = {
             user:{
                 name:user.name,
