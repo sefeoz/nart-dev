@@ -8,7 +8,7 @@ function MyApp({Component, pageProps}) {
         <Auth0Provider
         domain={"dev-k32gu9l5.us.auth0.com"}
         clientId={"t3G36omFzCjIfWgr79GKjG5z3BfE3dlw"}
-        redirectUri={"https://nartdeveloper.com"}
+        redirectUri={"https://www.nartdeveloper.com/"}
         >
         <div>
             <main className="mt-9">

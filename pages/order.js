@@ -64,7 +64,7 @@ export default function Order(){
                             </div>
                         </div>:<div className="flex justify-end my-4">
 
-                            <button typeof="button"
+                            <button typeof="submit"
                                     className="rounded bg-green-500 px-5 lato py-2 font-semibold
                                 hover:bg-inherit hover:text-green-500 text-lg ease-in-out duration-200"
                                     onClick={() => loginWithRedirect()}>
