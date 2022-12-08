@@ -1,6 +1,7 @@
 import {useAuth0} from "@auth0/auth0-react";
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
+
 export default function Order(){
     const { loginWithRedirect,logout,isAuthenticated,user,getAccessTokenSilently} = useAuth0();
     const [text,textSet] = useState("");
@@ -11,17 +12,17 @@ export default function Order(){
         console.log(url);
         urlSet(url);
         const order = document.getElementById("order");
-        const html = ` <div class="text-center text-white my-64 bg-transparent">
+
+    },[])
+    const html = ` <div class="text-center text-white my-64 bg-transparent">
                     <h1 class="text-7xl font-bold">Siparişinizi Aldık </h1>
                     <p class="text-5xl font-thin mt-6">En kısa sürede sizinle iletişime geçeceğiz</p>
                    
                 </div>
     `
-    },[])
-    function orderSuccess(){
-        order.innerHTML = html
-    }
-
+        function orderSuccess(){
+            order.innerHTML = html
+        }
 
     const onSubmit = async (e)=>{
         e.preventDefault();
@@ -101,7 +102,6 @@ export default function Order(){
             </div>
         </div>
         </div>
-
 
     )
 }
