@@ -10,17 +10,19 @@ export default function Order(){
         const url = window.location.href;
         console.log(url);
         urlSet(url);
-    },[])
-    function orderSuccess(){
-        order.innerHTML = html
-    }
-    const html = ` <div class="text-center text-white my-64 bg-transparent">
+        const order = document.getElementById("order");
+        const html = ` <div class="text-center text-white my-64 bg-transparent">
                     <h1 class="text-7xl font-bold">Siparişinizi Aldık </h1>
                     <p class="text-5xl font-thin mt-6">En kısa sürede sizinle iletişime geçeceğiz</p>
                    
                 </div>
     `
-    const order = document.getElementById("order");
+    },[])
+    function orderSuccess(){
+        order.innerHTML = html
+    }
+
+
     const onSubmit = async (e)=>{
         e.preventDefault();
         if (!isAuthenticated){
