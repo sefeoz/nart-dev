@@ -11,16 +11,25 @@ export default function Order(){
         console.log(url);
         urlSet(url);
     },[])
+    function orderSuccess(){
+        order.innerHTML = html
+    }
+    const html = ` <div class="text-center text-white my-64 bg-transparent">
+                    <h1 class="text-7xl font-bold">Siparişinizi Aldık</h1>
+                    <p class="text-5xl font-thin mt-6">En kısa sürede sizinle iletişime geçeceğiz</p>
+                   
+                </div>
+    `
+    const order = document.getElementById("order");
     const onSubmit = async (e)=>{
         e.preventDefault();
         if (!isAuthenticated){
             alert("Giriş Yapınız")
         }else{
             if (!url || !text || !email){
-                alert("Hatalı ya da eksik bilgi")
+                alert("Hatalı ya da eksik bilgi \n Tekrar Deneyiniz");
             }else{
-                alert("Siparişinizi Aldık\n En Kısa Sürede Email Adresinizden Size Ulaşacağız");
-                window.location.replace("https://www.nartdeveloper.com/")
+                orderSuccess();
             }
         }
 
@@ -35,8 +44,8 @@ export default function Order(){
         })
         const data = await response.json();
     }
-    return (
-        <div className={"bg-gray-200 bg-opacity-70"}>
+    return (<div id={"order"}>
+        <div className={"bg-gray-200 bg-opacity-70"} >
             <div className="site-6xl-container p-10">
                 <h1 className="text-5xl font-bold text-center text-gray-800">Özel Sipariş</h1>
                     <h1 className="text-3xl text-center text-gray-600 mt-6 font-extralight">Bize açık ve net bir şekilde hayallerinizden bahsedin. Bizde sizin için bunu sanal ortama taşıyalım.</h1>
@@ -89,6 +98,8 @@ export default function Order(){
                 </div>
             </div>
         </div>
+        </div>
+
 
     )
 }

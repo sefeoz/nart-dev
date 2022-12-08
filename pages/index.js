@@ -54,7 +54,9 @@ function Homepage(){
                     <h2 className="text-center text-white text-2xl mt-4 font-bold">Web Sitesi</h2>
                     <p className="text-xl text-gray-200 text-center mt-4">Sizin isteklerinize yönelik klasik web sitesi.</p>
                     <div className="text-center mt-5">
+                        <Link href={"/website"}>
                     <button className="text-center bg-white hover:bg-nav-green transition py-2 px-5 rounded-full text-center">Devam Et <FontAwesomeIcon className="my-auto" icon={faArrowRight}/></button>
+                        </Link>
                 </div>
                 </div>
                 <div className={"mx-5 my-4"}>
@@ -62,7 +64,9 @@ function Homepage(){
                     <h2 className="text-center text-white text-2xl mt-4 font-bold">Web Sitesi</h2>
                     <p className="text-xl text-gray-200 text-center mt-4">Sizin isteklerinize yönelik klasik web sitesi.</p>
                     <div className="text-center mt-5">
+                        <Link href={"/website"}>
                         <button className="text-center bg-white hover:bg-nav-green transition py-2 px-5 rounded-full text-center">Devam Et <FontAwesomeIcon className="my-auto" icon={faArrowRight}/></button>
+                        </Link>
                     </div>
                 </div>
                 <div className={"mx-5 my-4"}>
@@ -70,7 +74,9 @@ function Homepage(){
                     <h2 className="text-center text-white text-2xl mt-4 font-bold">Web Sitesi</h2>
                     <p className="text-xl text-gray-200 text-center mt-4">Sizin isteklerinize yönelik klasik web sitesi.</p>
                     <div className="text-center mt-5">
+                        <Link href={"/website"}>
                         <button className="text-center bg-white hover:bg-nav-green transition py-2 px-5 rounded-full text-center">Devam Et <FontAwesomeIcon className="my-auto" icon={faArrowRight}/></button>
+                        </Link>
                     </div>
                 </div>
             </div>
