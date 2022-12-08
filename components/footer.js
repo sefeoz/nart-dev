@@ -7,8 +7,8 @@ export default function Footer(){
         <div className={"site-6xl-container text-center lg:text-start lg:grid grid-cols-2"}>
             <div className="mb-10">
                 <div>
-                <a href="/" className="text-white text-2xl hover:text-gray-300 font-bold transition">Nart Yazılım</a>
-                <p className={"text-gray-400 text-lg mt-6 font-thin" }>Nart Yazılım 2022</p>
+                <a href="/" className="text-white text-2xl hover:text-gray-300 font-bold transition">Nart Developer</a>
+                <p className={"text-gray-400 text-lg mt-6 font-thin" }>Nart Developer 2022</p>
                 </div>
                 <div>
                     <p className={"text-white text-xl mt-10"}>Gelecek Sizlerle</p>

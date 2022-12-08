@@ -27,7 +27,7 @@ export default function Header(){
             <div className="w-full relative flex justify-center  lg:w-auto lg:static lg:block lg:justify-center">
                 <Link href={"/"}>
                     <p className="text-nav-green text-3xl font-extrabold hover:text-white transition mr-5">
-                        Nart Developer
+                        Nart Developer <span className="font-extralight text-xl"> +Beta</span>
                     </p>
                 </Link>
                 <button className="cursor-pointer text-2xl leading-none border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none p-0 mt-1.5" type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
