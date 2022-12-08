@@ -15,7 +15,7 @@ export default function Order(){
         order.innerHTML = html
     }
     const html = ` <div class="text-center text-white my-64 bg-transparent">
-                    <h1 class="text-7xl font-bold">Siparişinizi Aldık</h1>
+                    <h1 class="text-7xl font-bold">Siparişinizi Aldık </h1>
                     <p class="text-5xl font-thin mt-6">En kısa sürede sizinle iletişime geçeceğiz</p>
                    
                 </div>
