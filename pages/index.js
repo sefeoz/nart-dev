@@ -47,7 +47,7 @@ function Homepage(){
         {/*<----------------------------SECTION END------------------------------------------------------>*/}
         <section>
             <p className="text-center text-4xl font-bold text-gray-200">Paketlerimiz</p>
-            <p className="text-center text-3xl font-light mt-4 text-gray-300">Nart Yazılım İle Uygun Fiyatlı Sabit Proje Paketlerimiz</p>
+            <p className="text-center text-3xl font-light mt-4 text-gray-300">Nart Developer İle Uygun Fiyatlı Sabit Proje Paketlerimiz</p>
             <div className="lg:grid grid-cols-3 mt-10 site-6xl-container">
                 <div className={"mx-5 my-4"}>
                     <img src="/index-4.webp" className="mx-auto rounded-xl" alt=""/>
@@ -105,7 +105,7 @@ function Homepage(){
         <section className="mt-10">
             <div className="max-w-6xl lg:mx-auto lg:grid mx-5 items-center grid-cols-2 ">
                 <div className="mx-8 lg:text-start text-center">
-                    <h1 className="text-3xl font-bold mb-5 text-white">Nart Yazılım İle Gelecek Size Daha Yakın.</h1>
+                    <h1 className="text-3xl font-bold mb-5 text-white">Nart Developer İle Gelecek Size Daha Yakın.</h1>
                     <ul className="space-y-10 font-thin">
                     <li className="text-xl text-white my-4 align-items-center">Yenilikçi ve Güncel Çalışmalar.
                     </li>
