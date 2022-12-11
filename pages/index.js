@@ -130,37 +130,37 @@ function Homepage(){
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Baha Nart Şenel</p>
                         <p className={"text-xl"}>Nart CEO</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/bahanart1/">@bahanart1</a>
+                        <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/bahanart1/">@bahanart1</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Şadan Efe Öz</p>
                         <p className={"text-xl"}>Team Leader</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/sefeoz/">@sefeoz</a>
+                        <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/sefeoz/">@sefeoz</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Emirhan Şen</p>
                         <p className={"text-xl"}>Marketing Manager</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/emrhansn/">@emirhansn</a>
+                        <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/emrhansn/">@emirhansn</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5 ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/48/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Eren Ulaş Özcan</p>
                         <p className={"text-xl"}>Web Design</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/erenulasozcan/">@erenulasozcan</a>
+                        <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/erenulasozcan/">@erenulasozcan</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/119/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Oğuzhan Kavuncuoğlu</p>
                         <p className={"text-xl"}>Marketing Manager</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/oguzhankavuncuoglu/">@oguzhan.kavuncuoglu</a>
+                        <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/oguzhankavuncuoglu/">@oguzhan.kavuncuoglu</a>
                     </div>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/149/300/300/" alt=""/>
                         <p className="text-3xl font-bold mb-5">Bedirhan Pilatin</p>
                         <p className={"text-xl"}>Lawyer</p>
-                        <a className={"text-xl"} href="https://www.instagram.com/bedirhanpilatinn/">@bedirhanpilatinn</a>
+                        <a className={"text-xl"} target={"_blank"}  href="https://www.instagram.com/bedirhanpilatinn/">@bedirhanpilatinn</a>
                     </div>
 </Slider>
                 </div>
