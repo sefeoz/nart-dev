@@ -49,6 +49,11 @@ export default function Header(){
                     </li>
                     <li className={`${router.pathname === "/about" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
                         <Link href={"/about"}>
+                            <p>Projelerimiz</p>
+                        </Link>
+                    </li>
+                    <li className={`${router.pathname === "/proje" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
+                        <Link href={"/about"}>
                             <p>Hakkımızda</p>
                         </Link>
                     </li>
