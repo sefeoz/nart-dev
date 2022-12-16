@@ -128,7 +128,7 @@ function Homepage(){
                 <Slider {...settings}>
                     <div className="text-white text-center rounded-xl py-6 mt-5  ">
                         <img className="mx-auto rounded-xl mb-5" src="https://picsum.photos/id/60/300/300/" alt=""/>
-                        <p className="text-3xl font-bold mb-5">Baha Nart Şenel</p>
+                        <a className="text-3xl font-bold mb-5">Baha Nart Şenel</a>
                         <p className={"text-xl"}>Nart CEO</p>
                         <a className={"text-xl"} target={"_blank"} href="https://www.instagram.com/bahanart1/">@bahanart1</a>
                     </div>

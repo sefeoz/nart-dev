@@ -1,4 +1,6 @@
 import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 function Proje(){
     return(<>
         <section className="site-6xl-container mt-16">
