@@ -22,7 +22,7 @@ export default function Header(){
             x.classList.add("hidden")
         })
     })
-    return <nav className="relative flex flex-wrap site-4xl-container items-center justify-center  lg:py-0 mt-12 lg:my-9">
+    return <nav className="relative flex flex-wrap site-6xl-container items-center justify-center  lg:py-0 mt-12 lg:my-9">
         <div className="container  mx-auto flex flex-wrap items-center justify-center">
             <div className="w-full relative flex justify-center  lg:w-auto lg:static lg:block lg:justify-center">
                 <Link href={"/"}>
