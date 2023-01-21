@@ -21,8 +21,6 @@ function Proje(){
 
                     </div>
                 </div>
-                <div className="site-6xl-container">
-                    <div className="lg:grid grid-cols-3">
                         <div className="mx-5 my-5">
                             <img className={"mx-auto rounded-xl"} src="https://picsum.photos/id/60/300/300/" alt=""/>
                             <p className={"text-center text-2xl font-bold mt-5"}>C ile Hesap Makinesi</p>
