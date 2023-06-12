@@ -71,4 +71,4 @@ function Proje(){
         </>
     )
 }
-export default c++
+export default Proje
