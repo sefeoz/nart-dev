@@ -36,7 +36,7 @@ function Proje(){
                         <div className="mx-5 my-5">
                             <img className={"mx-auto rounded-xl"} src="https://picsum.photos/id/60/300/300/" alt=""/>
                             <p className={"text-center text-2xl font-bold mt-5"}>Sınav Sistemi</p>
-                        <Link href={"/sınav"}>
+                        <Link href={"/sinav"}>
                     <button className="text-center bg-white hover:bg-nav-green transition py-2 px-5 rounded-full text-center">Devam Et <FontAwesomeIcon className="my-auto" icon={faArrowRight}/></button>
                         </Link>
                         </div>
