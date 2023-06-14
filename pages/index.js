@@ -61,7 +61,7 @@ function Homepage(){
                 </div>
                 <div className={"mx-5 my-4"}>
                     <img src="/index-2.jpg" className=" mx-auto rounded-xl" alt=""/>
-                    <h2 className="text-center text-white text-2xl mt-4 font-bold">Web Sitesi</h2>
+                    <h2 className="text-center text-white text-2xl mt-4 font-bold">Tasarım</h2>
                     <p className="text-xl text-gray-200 text-center mt-4">Sizin isteklerinize yönelik klasik web sitesi.</p>
                     <div className="text-center mt-5">
                         <Link href={"/website"}>
@@ -71,7 +71,7 @@ function Homepage(){
                 </div>
                 <div className={"mx-5 my-4"}>
                     <img src="/index-3.jpg" className=" mx-auto rounded-xl" alt=""/>
-                    <h2 className="text-center text-white text-2xl mt-4 font-bold">Web Sitesi</h2>
+                    <h2 className="text-center text-white text-2xl mt-4 font-bold">Hosting</h2>
                     <p className="text-xl text-gray-200 text-center mt-4">Sizin isteklerinize yönelik klasik web sitesi.</p>
                     <div className="text-center mt-5">
                         <Link href={"/website"}>
