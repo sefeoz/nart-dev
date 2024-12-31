@@ -4,11 +4,31 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function Proje() {
     const projects = [
-        { title: "JavaScript ile Örnek Projelerimiz", href: "/javascrip" },
-        { title: "C ile Örnek Projelerimiz", href: "/c" },
-        { title: "C++ ile Örnek Projelerimiz", href: "/c++" },
-        { title: "HTML ile Örnek Projelerimiz", href: "/html" },
-        { title: "CSS ile Örnek Projelerimiz", href: "/css" },
+        {
+            title: "JavaScript ile Örnek Projelerimiz",
+            href: "/javascrip",
+            image: "/images/javascript.jpg"
+        },
+        {
+            title: "C ile Örnek Projelerimiz",
+            href: "/c",
+            image: "/images/c.jpg"
+        },
+        {
+            title: "C++ ile Örnek Projelerimiz",
+            href: "/c++",
+            image: "/images/cplusplus.jpg"
+        },
+        {
+            title: "HTML ile Örnek Projelerimiz",
+            href: "/html",
+            image: "/images/html.jpg"
+        },
+        {
+            title: "CSS ile Örnek Projelerimiz",
+            href: "/css",
+            image: "/images/css.jpg"
+        },
     ];
 
     return (
@@ -18,7 +38,8 @@ function Proje() {
                     <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
                         Projelerimiz
                     </h1>
-                    <p className="text-gray-200 text-lg mt-4">Çeşitli dillerde gerçekleştirdiğimiz projelerimizi keşfedin!</p>
+                    <p className="text-gray-200 text-center text-2xl font-light mt-5">Çeşitli dillerde
+                        gerçekleştirdiğimiz projelerimizi keşfedin!</p>
                 </section>
 
                 <section className="py-16">
@@ -27,6 +48,11 @@ function Proje() {
                             <div
                                 key={index}
                                 className="relative group bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-48 object-cover rounded-xl mb-4 transform group-hover:scale-105 transition duration-300"
+                                />
                                 <h2 className="text-white text-2xl font-bold">{project.title}</h2>
                                 <Link href={project.href}>
                                     <button className="mt-4 inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-lg shadow hover:bg-green-600 transition duration-300">

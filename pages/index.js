@@ -66,17 +66,29 @@ function Homepage() {
             </section>
 
             <section>
-                <p className="text-center text-4xl font-bold text-gray-200 fade-in">
+                <p className="text-center text-4xl font-bold text-nav-green fade-in">
                     Paketlerimiz
                 </p>
                 <p className="text-center text-3xl font-light mt-4 text-gray-300 fade-in delay-1">
-                    Nart Developer İle Uygun Fiyatlı Sabit Proje Paketlerimiz
+                    Nart Developer ile ihtiyaçlarınıza özel uygun fiyatlı sabit proje paketlerimizi keşfedin.
                 </p>
                 <div className="lg:grid grid-cols-3 mt-10 site-6xl-container">
                     {[
-                        {title: "Web Sitesi", image: "/index-4.webp"},
-                        {title: "Tasarım", image: "/index-2.jpg"},
-                        {title: "Hosting", image: "/index-3.jpg"},
+                        {
+                            title: "Web Sitesi",
+                            image: "/index-4.webp",
+                            description: "Kurumsal veya kişisel projeleriniz için modern ve işlevsel web sitesi tasarımları."
+                        },
+                        {
+                            title: "Tasarım",
+                            image: "/index-2.jpg",
+                            description: "Marka kimliğinizi yansıtan özgün tasarımlar ile dijital dünyada fark yaratın."
+                        },
+                        {
+                            title: "Hosting",
+                            image: "/index-3.jpg",
+                            description: "Web siteniz için hızlı, güvenilir ve 7/24 destekli hosting çözümleri sunuyoruz."
+                        },
                     ].map((packageItem, index) => (
                         <div
                             key={index}
@@ -93,7 +105,7 @@ function Homepage() {
                                 {packageItem.title}
                             </h2>
                             <p className="text-xl text-gray-200 text-center mt-4">
-                                Sizin isteklerinize yönelik klasik web sitesi.
+                                {packageItem.description} {/* Her paket için farklı açıklama */}
                             </p>
                             <div className="text-center mt-5">
                                 <Link href={"/website"}>
@@ -176,7 +188,7 @@ function Homepage() {
                         </ul>
                     </div>
                     <div className="mx-auto mt-5">
-                    <img className="rounded-xl mx-auto" src="/index-5.jpg" alt=""/>
+                        <img className="rounded-xl mx-auto" src="/index-5.jpg" alt=""/>
                     </div>
                 </div>
             </section>
@@ -222,39 +234,51 @@ function Homepage() {
                         Müşterilerimizin Değerlendirmesi ve Yorumları
                     </p>
                     <div className="lg:grid grid-cols-2">
-                        <div className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
-                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/101/300/300/" alt=""/>
+                        <div
+                            className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
+                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/101/300/300/"
+                                 alt=""/>
                             <div>
                                 <p className="text-xl font-bold">Ahmet Yılmaz</p>
                                 <p className="font-light text-gray-600 text-ellipsis line-clamp-1 group-hover:line-clamp-none transition-all">
-                                    "Nart Developer ile çalışmak gerçekten harika bir deneyimdi. Projemiz her aşamada hızlı ve kaliteli bir şekilde ilerledi. Çok memnun kaldım!"
+                                    "Nart Developer ile çalışmak gerçekten harika bir deneyimdi. Projemiz her aşamada
+                                    hızlı ve kaliteli bir şekilde ilerledi. Çok memnun kaldım!"
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
-                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/102/300/300/" alt=""/>
+                        <div
+                            className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
+                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/102/300/300/"
+                                 alt=""/>
                             <div>
                                 <p className="text-xl font-bold">Elif Demir</p>
                                 <p className="font-light text-gray-600 text-ellipsis line-clamp-1 group-hover:line-clamp-none transition-all">
-                                    "Ekip çok profesyoneldi. Web tasarımım tam istediğim gibi oldu. İletişim sürekli açık ve her şey zamanında teslim edildi. Kesinlikle tekrar çalışırım."
+                                    "Ekip çok profesyoneldi. Web tasarımım tam istediğim gibi oldu. İletişim sürekli
+                                    açık ve her şey zamanında teslim edildi. Kesinlikle tekrar çalışırım."
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
-                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/103/300/300/" alt=""/>
+                        <div
+                            className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
+                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/103/300/300/"
+                                 alt=""/>
                             <div>
                                 <p className="text-xl font-bold">Murat Kılıç</p>
                                 <p className="font-light text-gray-600 text-ellipsis line-clamp-1 group-hover:line-clamp-none transition-all">
-                                    "Gerçekten harika bir ekip! Süreç boyunca her adımda çok yardımcı oldular ve projeyi mükemmel şekilde tamamladılar. Sonuçtan çok memnun kaldım!"
+                                    "Gerçekten harika bir ekip! Süreç boyunca her adımda çok yardımcı oldular ve projeyi
+                                    mükemmel şekilde tamamladılar. Sonuçtan çok memnun kaldım!"
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
-                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/104/300/300/" alt=""/>
+                        <div
+                            className="flex justify-center items-center bg-white p-5 rounded-xl m-4 transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100 group">
+                            <img className="max-h-32 rounded-full mr-5" src="https://picsum.photos/id/104/300/300/"
+                                 alt=""/>
                             <div>
                                 <p className="text-xl font-bold">Zeynep Şahin</p>
                                 <p className="font-light text-gray-600 text-ellipsis line-clamp-1 group-hover:line-clamp-none transition-all">
-                                    "Projemin her aşamasında bana rehberlik ettiler ve istediğim sonuçları tam olarak aldım. Çok memnun kaldım, kesinlikle tavsiye ederim!"
+                                    "Projemin her aşamasında bana rehberlik ettiler ve istediğim sonuçları tam olarak
+                                    aldım. Çok memnun kaldım, kesinlikle tavsiye ederim!"
                                 </p>
                             </div>
                         </div>
