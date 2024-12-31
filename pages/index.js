@@ -118,25 +118,25 @@ function Homepage() {
                     </div>
                     <div className="mx-8 lg:text-start text-center">
                         <h1 className="text-3xl font-bold mb-5 text-nav-green">
-                            Destek Ekibimiz İle Her Zaman Yanınızdayız.
+                            Destek Ekibimiz İle Her Zaman Yanınızdayız
                         </h1>
                         <ul className="space-y-10 font-thin text-xl text-white">
                             <li className="my-4">
                                 <TypingEffect
                                     text="Projelerinizin ihtiyaçlarını tam olarak anlamak ve özel isteklerinize göre şekillendirmek için sizinle yakın bir iş birliği içinde çalışıyoruz. İsteklerinizi gerçekleştirmek için detaylı analiz ve uygulama süreçleri sunuyoruz."
-                                    speed={80}
+                                    speed={50}
                                 />
                             </li>
                             <li className="my-4">
                                 <TypingEffect
                                     text="Markanızı ön plana çıkaran, profesyonelce tasarlanmış logolar ve kreatif tasarımlar sunuyoruz. Görsel tasarım çözümlerimizle, markanızın kimliğini en iyi şekilde yansıtmayı hedefliyoruz."
-                                    speed={80}
+                                    speed={50}
                                 />
                             </li>
                             <li className="my-4">
                                 <TypingEffect
                                     text="Planlı ve organize bir yaklaşımla, projenizin her aşamasında rehberlik sağlıyoruz. Stratejik planlama ve iş akış yönetimiyle, projenizin hedeflerine ulaşması için destek oluyoruz."
-                                    speed={80}
+                                    speed={50}
                                 />
                             </li>
                         </ul>
@@ -151,26 +151,26 @@ function Homepage() {
                     <div className="mx-8 lg:text-start text-center">
                         {/* Başlık kısmında daktilo efekti yok */}
                         <h1 className="text-3xl font-bold mb-5 text-nav-green">
-                            Nart Developer İle Gelecek Size Daha Yakın.
+                            Nart Developer İle Gelecek Size Daha Yakın
                         </h1>
                         <ul className="space-y-10 font-thin text-xl text-white">
                             {/* Detaylı ve profesyonel metinler */}
                             <li className="my-4">
                                 <TypingEffect
                                     text="Teknoloji dünyasındaki en son trendleri yakından takip ederek, müşterilerimize yenilikçi ve güncel çözümler sunuyoruz. Nart Developer ile her projeniz, modern teknolojilerle güçlendirilmiş, kullanıcı dostu ve estetik açıdan mükemmel bir yapıya kavuşur."
-                                    speed={120}
+                                    speed={50}
                                 />
                             </li>
                             <li className="my-4">
                                 <TypingEffect
                                     text="Her müşteri, kendine özgü hedeflere ve ihtiyaçlara sahiptir. Biz, kişisel ve kurumsal gereksinimlerinizi anlayarak tamamen size özel, ölçeklenebilir ve uzun vadeli yazılım çözümleri geliştiriyoruz. Projeleriniz, sizin vizyonunuz doğrultusunda tasarlanır ve hayata geçirilir."
-                                    speed={120}
+                                    speed={50}
                                 />
                             </li>
                             <li className="my-4">
                                 <TypingEffect
                                     text="Müşterilerimizin projelerine sadece bir başlangıç noktası olarak değil, uzun soluklu bir ortaklık olarak bakıyoruz. Nart Developer olarak, ihtiyaçlarınıza hızlı yanıt veren, teknik sorunlarınızı çözen ve sürekli gelişim için sizinle birlikte çalışan bir ekip sunuyoruz."
-                                    speed={120}
+                                    speed={50}
                                 />
                             </li>
                         </ul>

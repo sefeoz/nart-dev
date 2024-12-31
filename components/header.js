@@ -44,12 +44,17 @@ export default function Header(){
                 <ul className="font-bold flex text-md flex-col items-center my-3 lg:flex-row list-none lg:ml-auto lg:space-y-0 lg:space-x-2 space-y-3">
                     <li className={`${router.pathname === "/" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
                         <Link href={"/"}>
-                            <p >Ana Sayfa</p>
+                            <p>Ana Sayfa</p>
                         </Link>
                     </li>
                     <li className={`${router.pathname === "/proje" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
                         <Link href={"/proje"}>
                             <p>Projelerimiz</p>
+                        </Link>
+                    </li>
+                    <li className={`${router.pathname === "/about" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
+                        <Link href={"/website"}>
+                            <p>Web Sitesi</p>
                         </Link>
                     </li>
                     <li className={`${router.pathname === "/about" ? "text-nav-green" : "text-white"}   nav-item hover:text-nav-green text-white py-2 px-5 transition`}>
@@ -63,25 +68,26 @@ export default function Header(){
                         </Link>
                     </li>
                     <div>
-                        {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
-                            <img src={user.picture} className="rounded-full" width="40" />
-                            <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
-                            <button typeof="button"
-                                    className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
+                        {isAuthenticated ?
+                            <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
+                                <img src={user.picture} className="rounded-full" width="40"/>
+                                <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
+                                <button typeof="button"
+                                        className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
                                 hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
-                                    onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
-                                Çıkış
-                            </button>
-                        </div>:<div className="">
-                            <button typeof="button"
-                                    className="flex rounded bg-nav-green px-5 py-2 font-semibold lato text-back-blue
+                                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
+                                    Çıkış
+                                </button>
+                            </div> : <div className="">
+                                <button typeof="button"
+                                        className="flex rounded bg-nav-green px-5 py-2 font-semibold lato text-back-blue
                                 hover:bg-inherit hover:text-nav-green text-lg md:text-[1rem] ease-in-out duration-200"
-                                    onClick={() => loginWithRedirect()}>
-                                Kayıt Ol
-                            </button>
+                                        onClick={() => loginWithRedirect()}>
+                                    Kayıt Ol
+                                </button>
 
 
-                        </div>}
+                            </div>}
                     </div>
                 </ul>
             </div>

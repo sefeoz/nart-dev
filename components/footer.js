@@ -1,55 +1,88 @@
 import React from "react";
-import {useAuth0} from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { motion } from "framer-motion";
 
-export default function Footer(){
-    const { loginWithRedirect,logout,isAuthenticated,user} = useAuth0();
-    return(<div className="bg-gray-600 py-10">
-        <div className={"site-6xl-container text-center lg:text-start lg:grid grid-cols-2"}>
-            <div className="mb-10">
-                <div>
-                <a href="/" className="text-white text-2xl hover:text-gray-300 font-bold transition">Nart Developer</a>
-                <p className={"text-gray-400 text-lg mt-6 font-thin" }>Nart Developer 2022</p>
-                </div>
-                <div>
-                    <p className={"text-white text-xl mt-10"}>Gelecek Sizlerle</p>
-                </div>
-            </div>
-            <div className="grid grid-cols-2 text-center">
-                <div>
-                    <p className="text-white font-bold text-2xl">Sayfalar</p>
-                    <div className="mt-5">
-                        <ul className="text-gray-300 space-y-3 text-xl">
-                            <li><a className="hover:text-gray-500 transition font-thin" href="/">Ana Sayfa</a></li>
-                            <li><a className="hover:text-gray-500 transition font-thin" href="/about">Hakkımızda</a></li>
-                            <li><a className="hover:text-gray-500 transition font-thin" href="/blog">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <p className="text-2xl text-white font-bold text-center">Giriş Yap</p>
-                    <div>
+export default function Footer() {
+    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
+    return (
+        <div className="bg-gradient-to-r from-indigo-700 to-blue-600 py-6">
+            <div className="site-6xl-container text-center text-white">
+                {/* Logo and Info */}
+                <motion.div
+                    className="mb-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <a href="/" className="text-3xl font-bold hover:text-gray-300 transition">
+                        Nart Developer
+                    </a>
+                    <p className="text-sm mt-2 font-thin">Yenilikçi çözümler ve kaliteli hizmet.</p>
+                </motion.div>
 
-                    {isAuthenticated ? <div className="flex flex-col  items-center mt-5 space-y-3 ">
-                        <img src={user.picture} className="rounded-full" width="40" />
-                        <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
-                        <button typeof="button"
-                                className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
-                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
-                                onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
-                            Çıkış
-                        </button>
-                    </div>:<div className="mt-5 text-center">
-                        <button typeof="button"
-                                className="text-gray-300 text-xl font-thin hover:bg-nav-green px-5 py-2 rounded-full hover:text-back-blue transition "
-                                onClick={() => loginWithRedirect()}>
-                            Kayıt Ol
-                        </button>
-                    </div>}
-                    </div>
-                </div>
+                {/* Navigation Links */}
+                <motion.div
+                    className="text-sm mt-4 space-x-6"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                    <a href="/" className="hover:text-gray-300 transition">Ana Sayfa</a>
+                    <a href="/about" className="hover:text-gray-300 transition">Hakkımızda</a>
+                    <a href="/blog" className="hover:text-gray-300 transition">Blog</a>
+                </motion.div>
+
+                {/* Login / Logout */}
+                <motion.div
+                    className="mt-5"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1 }}
+                >
+                    {isAuthenticated ? (
+                        <div className="flex flex-col items-center">
+                            <img src={user.picture} className="rounded-full" width="40" />
+                            <span className="font-semibold text-sm text-gray-100">{user.name}</span>
+                            <motion.button
+                                whileHover={{
+                                    scale: 1.1,
+                                    backgroundColor: "#ef4444",
+                                    boxShadow: "0px 4px 20px rgba(239, 68, 68, 0.3)",
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-red-500 text-white px-5 py-2 mt-2 rounded-lg"
+                                onClick={() => logout({ returnTo: window.location.origin })}
+                            >
+                                Çıkış
+                            </motion.button>
+                        </div>
+                    ) : (
+                        <motion.button
+                            whileHover={{
+                                scale: 1.1,
+                                backgroundColor: "#10b981",
+                                boxShadow: "0px 4px 20px rgba(16, 185, 129, 0.3)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-green-500 text-white px-5 py-2 mt-2 rounded-lg"
+                            onClick={() => loginWithRedirect()}
+                        >
+                            Giriş Yap / Kayıt Ol
+                        </motion.button>
+                    )}
+                </motion.div>
+
+                {/* Footer Bottom */}
+                <motion.div
+                    className="mt-6 text-sm font-thin"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                >
+                    <p>&copy; 2022 Nart Developer. Tüm Hakları Saklıdır.</p>
+                </motion.div>
             </div>
         </div>
-    </div>
-    )
+    );
 }
