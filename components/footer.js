@@ -15,7 +15,7 @@ export default function Footer() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <a href="/" className="text-3xl font-bold hover:text-gray-300 transition">
+                    <a href="/" className="text-3xl font-bold hover:text-nav-green transition">
                         Nart Developer
                     </a>
                     <p className="text-sm mt-2 font-thin">Yenilikçi çözümler ve kaliteli hizmet.</p>
@@ -28,9 +28,9 @@ export default function Footer() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                    <a href="/" className="hover:text-gray-300 transition">Ana Sayfa</a>
-                    <a href="/about" className="hover:text-gray-300 transition">Hakkımızda</a>
-                    <a href="/blog" className="hover:text-gray-300 transition">Blog</a>
+                    <a href="/" className="hover:text-nav-green transition">Ana Sayfa</a>
+                    <a href="/about" className="hover:text-nav-green transition">Hakkımızda</a>
+                    <a href="/blog" className="hover:text-nav-green transition">Blog</a>
                 </motion.div>
 
                 {/* Login / Logout */}
@@ -80,7 +80,7 @@ export default function Footer() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.5 }}
                 >
-                    <p>&copy; 2022 Nart Developer. Tüm Hakları Saklıdır.</p>
+                    <p>&copy; 2025 Nart Developer. Tüm Hakları Saklıdır.</p>
                 </motion.div>
             </div>
         </div>

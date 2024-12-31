@@ -197,7 +197,7 @@ function Homepage() {
             {/* Team Section */}
             <section className="mt-16 mx-4 fade-in delay-3">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-white text-center text-4xl font-extrabold mb-6">
+                    <h1 className="text-nav-green text-center text-4xl font-extrabold mb-6">
                         Proje Ekibimiz
                     </h1>
                     <Slider {...settings}>
@@ -227,7 +227,7 @@ function Homepage() {
             {/* Customers Section */}
             <section className="mt-16 hidden lg:block">
                 <div className="site-6xl-container">
-                    <p className="text-white text-center text-4xl font-extrabold">
+                    <p className="text-nav-green text-center text-4xl font-extrabold">
                         Müşterilerimiz
                     </p>
                     <p className="text-white text-center text-2xl mt-4 font-thin">
