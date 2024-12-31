@@ -34,7 +34,7 @@ const About = () => {
     return (
         <>
             <section className="site-6xl-container mt-16">
-                <h1 className="text-white text-4xl font-extrabold text-center" data-aos="fade-up">
+                <h1 className="text-nav-green text-4xl font-extrabold text-center" data-aos="fade-up">
                     Hakkımızda
                 </h1>
                 <p className="text-gray-200 text-center text-3xl font-thin mt-5" data-aos="fade-up" data-aos-delay="300">
@@ -45,15 +45,15 @@ const About = () => {
                         Nart Developer, 2022 yılında Nart tarafından kurulmuş bağımsız bir yazılım şirketidir.
                     </p>
                     <p className="text-xl mt-5 font-light text-gray-700">
-                        Nart Developer'ın amacı geleceği herkese hazır hale getirebilmek için dünyadaki herkesin yazılım ile
-                        bilgilendirilmesi ve herkese bu gelecekte birer yer verilmesidir. Bunun için herkesi yazılım gibi
-                        çeşitli teknolojik alanlarda onlara bir olanak ve yardımcı bir alan oluşturmaktadır.
+                        Vizyonumuz, geleceği herkes için erişilebilir ve hazır hale getirmektir. Bunun için yazılımın gücünü kullanarak, dünya genelindeki insanları bilgilendirmeyi ve teknoloji dünyasında herkesin yer bulmasını sağlamayı hedefliyoruz.
+
+                        Nart Developer, bireylerin yazılım ve diğer teknolojik alanlarda gelişmesine olanak tanırken, bu süreçte onların yanında olacak bir rehberlik ve destek platformu sunmaktadır. Amacımız, teknolojinin sunduğu fırsatları herkes için erişilebilir hale getirerek, daha kapsayıcı bir gelecek inşa etmektir.
                     </p>
                 </div>
             </section>
 
             <section className="site-6xl-container pb-20">
-                <h1 className="text-white text-4xl text-center font-extrabold" data-aos="fade-up">
+                <h1 className="text-nav-green text-4xl text-center font-extrabold" data-aos="fade-up">
                     Verilerimiz
                 </h1>
                 <p className="text-white font-thin text-center text-3xl mt-5" data-aos="fade-up" data-aos-delay="300">

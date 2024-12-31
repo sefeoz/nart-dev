@@ -1,53 +1,77 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Proje() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     const projects = [
         {
             title: "JavaScript ile Örnek Projelerimiz",
             href: "/javascrip",
-            image: "/images/javascript.jpg"
+            image: "/images/javascript.jpg",
         },
         {
             title: "C ile Örnek Projelerimiz",
             href: "/c",
-            image: "/images/c.jpg"
+            image: "/images/c.jpg",
         },
         {
             title: "C++ ile Örnek Projelerimiz",
             href: "/c++",
-            image: "/images/cplusplus.jpg"
+            image: "/images/cplusplus.jpg",
         },
         {
             title: "HTML ile Örnek Projelerimiz",
             href: "/html",
-            image: "/images/html.jpg"
+            image: "/images/html.jpg",
         },
         {
             title: "CSS ile Örnek Projelerimiz",
             href: "/css",
-            image: "/images/css.jpg"
+            image: "/images/css.jpg",
         },
     ];
 
     return (
         <>
             <div className="animated-bg min-h-screen flex flex-col items-center">
+                {/* Başlık ve Açıklama */}
                 <section className="mt-16 text-center">
-                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+                    <h1
+                        className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"
+                        data-aos="fade-up"
+                    >
                         Projelerimiz
                     </h1>
-                    <p className="text-gray-200 text-center text-2xl font-light mt-5">Çeşitli dillerde
-                        gerçekleştirdiğimiz projelerimizi keşfedin!</p>
+                    <p
+                        className="text-gray-200 text-center text-2xl font-light mt-5"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        Çeşitli dillerde gerçekleştirdiğimiz projelerimizi keşfedin!
+                    </p>
                 </section>
 
+                {/* Proje Kartları */}
                 <section className="py-16">
-                    <div className="site-6xl-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div
+                        className="site-6xl-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
                         {projects.map((project, index) => (
                             <div
                                 key={index}
-                                className="relative group bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                                className="relative group bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
+                                data-aos="fade-up"
+                                data-aos-delay={`${index * 200}`}
+                            >
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -69,6 +93,7 @@ function Proje() {
                 </section>
             </div>
 
+            {/* AOS CSS ve Animasyon Ayarları */}
             <style jsx global>{`
                 @keyframes gradientAnimation {
                     0% {
@@ -113,3 +138,4 @@ function Proje() {
 }
 
 export default Proje;
+

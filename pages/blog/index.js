@@ -1,21 +1,37 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // AOS'un CSS dosyasını dahil edin
 
 function Blog() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true }); // AOS'u başlat
+    }, []);
+
     return (
         <div className="relative overflow-hidden">
-            {/* Arka Plan Animasyonu */}
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 animate-pulse-opacity -z-10"></div>
-
-            <div className="site-6xl-container py-10">
-                <h1 className="text-white text-5xl font-extrabold text-center mb-5 tracking-tight">
+            {/* Başlık ve Açıklama */}
+            <section className="site-6xl-container mt-8 mb-16">
+                <h1
+                    className="text-nav-green text-4xl font-extrabold text-center"
+                    data-aos="fade-up"
+                >
                     Blog
                 </h1>
-                <p className="text-gray-200 text-center text-2xl font-light mt-5">
+                <p
+                    className="text-gray-200 text-center text-2xl font-light mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
                     Güncel gelişmeleri, ilham veren fikirleri ve sektörel yenilikleri paylaşıyoruz.
                 </p>
 
                 {/* Blog Kartları */}
-                <div className="lg:grid grid-cols-3 gap-10 mx-4 mt-10"> {/* mt-10 eklendi */}
+                <div
+                    className="lg:grid grid-cols-3 gap-10 mx-4 mt-8"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
                     {[
                         {
                             title: "Teknolojinin Geleceği: Yapay Zeka",
@@ -63,6 +79,8 @@ function Blog() {
                         <div
                             key={index}
                             className="relative bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+                            data-aos="fade-up"
+                            data-aos-delay={`${400 + index * 200}`}
                         >
                             {/* Görsel */}
                             <img
@@ -73,9 +91,9 @@ function Blog() {
                             {/* İçerik */}
                             <div className="p-6">
                                 <Link href={item.link}>
-                                    <h1 className="font-bold text-center text-2xl text-gray-800 hover:text-blue-500 transition-colors duration-300">
+                                    <h2 className="font-bold text-center text-2xl text-gray-800 hover:text-blue-500 transition-colors duration-300">
                                         {item.title}
-                                    </h1>
+                                    </h2>
                                 </Link>
                                 <p className="text-center text-gray-600 mt-4">
                                     {item.content}
@@ -84,12 +102,14 @@ function Blog() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
 
 export default Blog;
+
+
 
 
 
