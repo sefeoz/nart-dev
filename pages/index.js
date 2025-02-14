@@ -31,7 +31,7 @@ function Homepage() {
 
     return (
         <>
-            {/* Hero Section */}
+        
             <section className="max-w-4xl mx-auto my-16 fade-in">
                 <div className="lg:grid lg:grid-cols-2 items-center lg:py-8">
                     <img
@@ -64,7 +64,6 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-
             <section>
                 <p className="text-center text-4xl font-bold text-nav-green fade-in">
                     Paketlerimiz
@@ -120,8 +119,6 @@ function Homepage() {
                     ))}
                 </div>
             </section>
-
-
             {/* Support Section */}
             <section className="mt-10">
                 <div className="max-w-6xl lg:mx-auto lg:grid items-center mx-5 grid-cols-2">
@@ -155,8 +152,6 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-
-
             {/* Future Section */}
             <section className="mt-10">
                 <div className="max-w-6xl lg:mx-auto lg:grid mx-5 items-center grid-cols-2">
@@ -192,8 +187,6 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-
-
             {/* Team Section */}
             <section className="mt-16 mx-4 fade-in delay-3">
                 <div className="max-w-7xl mx-auto">
@@ -223,7 +216,6 @@ function Homepage() {
                     </Slider>
                 </div>
             </section>
-
             {/* Customers Section */}
             <section className="mt-16 hidden lg:block">
                 <div className="site-6xl-container">

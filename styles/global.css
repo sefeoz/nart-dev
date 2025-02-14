@@ -16,7 +16,6 @@
         @apply max-w-6xl mx-auto
     }
     html{
-        background-image: url("/hero-bg.png");
-        @apply bg-back-blue bg-no-repeat bg-right-top
+        @apply bg-gradient-to-b from-blue-400 via-blue-700 to-blue-400
     }
 }

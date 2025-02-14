@@ -51,7 +51,6 @@ const About = () => {
                     </p>
                 </div>
             </section>
-
             <section className="site-6xl-container pb-20">
                 <h1 className="text-nav-green text-4xl text-center font-extrabold" data-aos="fade-up">
                     Verilerimiz
@@ -74,8 +73,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="bg-white mt-10 py-10">
+            <section className=" mt-10 py-10">
                 <div className="site-6xl-container">
                     <div className="lg:grid grid-cols-3 gap-10">
                         {[
