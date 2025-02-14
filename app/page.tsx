@@ -1,10 +1,45 @@
 'use client';
 
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Image from 'next/image';
 
 export default function Home() {
+  useEffect(() => {
+    // Sayfa yüklendiğinde otomatik kaydırma
+    const handleScroll = () => {
+      const kategoriElement = document.getElementById('kategori'); // Kategori bölümünün ID'si
+      if (kategoriElement) {
+        const kategoriOffset = kategoriElement.offsetTop; // Kategori bölümünün üst konumu
+        if (window.scrollY >= kategoriOffset - 100) { // 100px aşağıda kaydırma
+          window.requestAnimationFrame(() => {
+            window.scrollTo({
+              top: kategoriOffset,
+              behavior: 'smooth' // Kaydırma animasyonu
+            });
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll); // Scroll eventini dinle
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Temizleme işlemi
+    };
+  }, []);
+
+  const scrollToCategory = () => {
+    const kategoriElement = document.getElementById('kategori');
+    if (kategoriElement) {
+      const kategoriOffset = kategoriElement.offsetTop;
+      window.scrollTo({
+        top: kategoriOffset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <main className="animate-fade-in">
       <Navbar />
@@ -26,7 +61,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a 
-                  href="/products" 
+                  href="/siparis" 
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold 
                            bg-gradient-to-r from-green-500 to-blue-500 rounded-full
                            hover:from-green-600 hover:to-blue-600 
@@ -87,14 +122,15 @@ export default function Home() {
         {/* Ana içerik */}
         <div className="container-custom relative z-30 mt-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Sol taraf - Ana metin */}
-            <div className="text-white space-y-8 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-[#1e90ff]">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-[#1e90ff] to-[#32cd32] bg-clip-text text-transparent mt-0">
               Öne Çıkan Hizmetlerimiz
               </h1>
+            {/* Sol taraf - Ana metin */}
+            <div className="text-white space-y-8 animate-fade-in">
+
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {[
               {
                 title: "Profesyonel Web Geliştirme",
@@ -131,19 +167,19 @@ export default function Home() {
                           hover:bg-white/30 transition-all duration-500 animate-fade-in ${hizmet.delay}`}
               >
                 <div className={`w-16 h-16 rounded-xl mb-6 flex items-center justify-center text-3xl
-                              bg-gradient-to-br ${hizmet.gradient} transform group-hover:scale-110 
+                              bg-gradient-to-b from-gray-950 via-gray-900 to-black transform group-hover:scale-110 
                               transition-transform duration-500`}>
-                  {hizmet.icon}
+                  <span className="text-[#ffd700]">{hizmet.icon}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-[#1e90ff] mb-4 group-hover:text-[#32cd32] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-[#1e90ff] mb-4">
                   {hizmet.title}
                 </h3>
-                <p className="text-[#333] leading-relaxed group-hover:text-[#32cd32] transition-colors duration-300">
+                <p className="block mt-2 text-black group-hover:bg-gradient-to-r from-[#1e90ff] to-[#32cd32] bg-clip-text group-hover:text-transparent">
                   {hizmet.description}
                 </p>
                 <div className="mt-6 opacity-0 transform translate-y-4 group-hover:opacity-100 
                               group-hover:translate-y-0 transition-all duration-300">
-                  <a href="#" className="inline-flex items-center text-blue-300 hover:text-blue-200">
+                  <a href="#" className="inline-flex items-center text-white hover:text-gray-300">
                     Detaylı Bilgi
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -165,12 +201,11 @@ export default function Home() {
             {/* Sol taraf - Metin içeriği */}
             <div className="text-white space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Sürdürülebilir Gelecek İçin
-                <span className="block mt-2 text-amber-200">Çevreci Üretim</span>
+              Nart Developer 
+                <span className="block mt-2 text-amber-200">İşletmenizi Geleceğe Taşıyoruz</span>
               </h2>
               <p className="text-lg text-amber-50 leading-relaxed">
-                Moda Dora olarak yalnızca kaliteli kumaşlar sunmakla kalmıyor, aynı zamanda sürdürülebilir
-                üretim süreçleriyle çevreye duyarlı bir yaklaşım benimsiyoruz.
+              Nart Developer olarak, her sektöre ve her ihtiyaca uygun modern, hızlı ve etkili web siteleri geliştiriyoruz. İşletmenizi dijital çağa uyarlıyor, markanızı daha geniş kitlelere ulaştıracak profesyonel web çözümleri sunuyoruz.
               </p>
               <div className="pt-4">
                 <a 
@@ -191,27 +226,41 @@ export default function Home() {
             {/* Sağ taraf - İstatistikler */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#1e90ff] mb-2">85%</div>
-                <div className="text-amber-100">Geri Dönüştürülebilir Malzeme</div>
+                <div className="text-4xl font-bold text-[#1e90ff] mb-2">100%</div>
+                <div className="text-amber-100">Proje Görevini Tamamlama</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#1e90ff] mb-2">60%</div>
-                <div className="text-amber-100">Su Tasarrufu</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#1e90ff] mb-2">40%</div>
-                <div className="text-amber-100">Enerji Verimliliği</div>
+                <div className="text-4xl font-bold text-[#1e90ff] mb-2">100%</div>
+                <div className="text-amber-100">Müşteri Memnuniyeti</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <div className="text-4xl font-bold text-[#1e90ff] mb-2">90%</div>
-                <div className="text-amber-100">Müşteri Memnuniyeti</div>
+                <div className="text-amber-100">Hızlı Teslimat</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="text-4xl font-bold text-[#1e90ff] mb-2">95%</div>
+                <div className="text-amber-100">Tekrar Çalışma Oranı</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <div id="kategori"> {/* Kategori bölümüne ID ekledim */}
+        {/* Kategori içeriği buraya gelecek */}
+      </div>
       <Footer />
+
+      {/* Aşağı kaydırma oku */}
+      <div 
+        className="fixed bottom-4 right-4 cursor-pointer bg-gray-800 text-white rounded-full p-2 shadow-lg hover:bg-gray-700 transition animate-bounce"
+        onClick={scrollToCategory}
+        title="Aşağı Kaydır"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
     </main>
   );
 }

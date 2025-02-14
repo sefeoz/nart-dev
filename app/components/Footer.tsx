@@ -8,18 +8,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           {/* Logo ve Açıklama */}
           <div className="max-w-sm">
-            <h2 className="text-2xl font-bold text-white mb-4">Moda Dora</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Nart Developer</h2>
             <p className="text-gray-400 leading-relaxed mb-6">
-              2008 yılından beri tekstil sektöründe kaliteli ürün ve hizmet sunmanın gururunu yaşıyoruz.
+              2021 yılından beri hayallerinizdeki işletmenizi geleceğe taşıyoruz.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="tel:+902121234567" className="text-gray-400 hover:text-white transition-colors">
-                <span className="flex items-center gap-2">
-                  <span className="text-lg">📞</span>
-                  +90 (212) 123 45 67
-                </span>
-              </a>
-            </div>
           </div>
 
           {/* Hızlı Erişim */}
@@ -32,7 +24,7 @@ export default function Footer() {
                   <a href="/about" className="text-gray-400 hover:text-white transition-colors">Hakkımızda</a>
                 </li>
                 <li>
-                  <a href="/products" className="text-gray-400 hover:text-white transition-colors">Ürünlerimiz</a>
+                  <a href="/products" className="text-gray-400 hover:text-white transition-colors">Projelerimiz</a>
                 </li>
                 <li>
                   <a href="/contact" className="text-gray-400 hover:text-white transition-colors">İletişim</a>
@@ -42,29 +34,21 @@ export default function Footer() {
 
             {/* Ürünler */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Ürünler</h3>
+              <h3 className="text-white font-semibold mb-4">Projelerimiz</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/products#cotton" className="text-gray-400 hover:text-white transition-colors">Pamuklu Kumaşlar</a>
+                  <a href="/products#cotton" className="text-gray-400 hover:text-white transition-colors">FK Tekstil</a>
                 </li>
                 <li>
-                  <a href="/products#polyester" className="text-gray-400 hover:text-white transition-colors">Polyester Kumaşlar</a>
+                  <a href="/products#polyester" className="text-gray-400 hover:text-white transition-colors">Vellichor Games</a>
                 </li>
                 <li>
-                  <a href="/products#linen" className="text-gray-400 hover:text-white transition-colors">Keten Kumaşlar</a>
+                  <a href="/products#linen" className="text-gray-400 hover:text-white transition-colors">Moda Dora</a>
                 </li>
               </ul>
             </div>
 
-            {/* İletişim */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Adres</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Tekstilkent Mah. <br />
-                Ticaret Cad. No:123 <br />
-                İstanbul/Türkiye
-              </p>
-            </div>
+            
           </div>
         </div>
 
@@ -72,7 +56,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 Moda Dora. Tüm hakları saklıdır.
+              © 2025 Nart Developer. Tüm hakları saklıdır.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
