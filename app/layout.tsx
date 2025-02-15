@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ScrollReveal from "./components/ScrollReveal";
+import AuthProvider from './components/AuthProvider'
 
 export const metadata: Metadata = {
   title: "Nart Developer",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ScrollReveal />
-        {children}
+        <AuthProvider>
+          <ScrollReveal />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

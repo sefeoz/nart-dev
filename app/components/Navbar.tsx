@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +17,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'py-4 bg-white/10 backdrop-blur-md border-b border-white/10' 
@@ -23,13 +27,13 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="relative group">
+          <Link href="/" className="relative group">
             <span className="text-2xl font-bold text-white">
               Nart Developer
             </span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/50
                          group-hover:w-full transition-all duration-300"></span>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">
@@ -39,15 +43,22 @@ export default function Navbar() {
               { title: 'Hakkımızda', href: '/about' },
               { title: 'İletişim', href: '/contact' },
             ].map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.href}
                 className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-full
                          hover:bg-white/10 transition-all duration-300"
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
+            <button 
+              onClick={() => loginWithRedirect()}
+              className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-full
+                       hover:bg-white/10 transition-all duration-300 ml-2"
+            >
+              Giriş Yap
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,14 +96,14 @@ export default function Navbar() {
               { title: 'Hakkımızda', href: '/about' },
               { title: 'İletişim', href: '/contact' },
             ].map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.href}
                 className="block px-4 py-3 text-base font-medium text-white/80 hover:text-white
                          hover:bg-white/10 rounded-lg transition-all duration-300"
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
