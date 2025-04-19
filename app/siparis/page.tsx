@@ -18,6 +18,9 @@ export default function Siparis() {
             <textarea id="message" name="message" required className="border border-gray-300 p-2 mb-4 w-full rounded h-24"></textarea>
             
             <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-200 w-full">Gönder</button>
+            <a href="https://wa.me/5422241326?text=Merhaba,%20size%20ulaşmak%20istiyorum." target="_blank" rel="noopener noreferrer" className="block text-center mt-4 text-blue-500 hover:underline">
+              WhatsApp ile İletişime Geçin
+            </a>
           </form>
         </div>
       </div>

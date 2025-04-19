@@ -2,7 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin , FaWhatsapp} from 'react-icons/fa';
 
 export default function Contact() {
   return (
@@ -27,17 +27,17 @@ export default function Contact() {
           <div className="flex flex-col items-center">
             <h2 className="text-3xl font-semibold text-white mb-4">Sosyal Medya</h2>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                <FaFacebook size={30} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+              <a href="https://twitter.com/bahanart1" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
                 <FaTwitter size={30} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
+              <a href="https://instagram.com/bahanart1" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
                 <FaInstagram size={30} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900">
+              <a href="https://www.linkedin.com/in/muammer-baha-şenel-569521246/" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900">
                 <FaLinkedin size={30} />
+              </a>
+              <a href="https://wa.me/5422241326?text=Merhaba,%20size%20ulaşmak%20istiyorum." target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-700">
+                <FaWhatsapp size={30} />
               </a>
             </div>
           </div>
