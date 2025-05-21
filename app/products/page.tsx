@@ -24,7 +24,7 @@ export default function Products() {
     {
       name: "Hızır Vinç",
       description: "İnşaat ve endüstriyel projelerinizde güvenilir ve etkili vinç çözümleri sunar.",
-      image: "/logo.png",
+      image: "/logo.PNG",
     },
     {
       name: "Dedem Tur",
