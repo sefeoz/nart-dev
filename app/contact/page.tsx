@@ -2,7 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin , FaWhatsapp} from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaLinkedin , FaWhatsapp} from 'react-icons/fa';
 
 export default function Contact() {
   return (

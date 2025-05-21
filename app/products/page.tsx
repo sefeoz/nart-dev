@@ -24,12 +24,22 @@ export default function Products() {
     {
       name: "Hızır Vinç",
       description: "İnşaat ve endüstriyel projelerinizde güvenilir ve etkili vinç çözümleri sunar.",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+      image: "/logo.png",
     },
     {
       name: "Dedem Tur",
       description: "Unutulmaz seyahat deneyimleri için kaliteli tur hizmetleri.",
       image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+    },
+    {
+      name: "Seneger Gıda",
+      description: "Kaliteli ve taze gıda ürünleriyle müşterilerine en iyi hizmeti sunmayı hedefler.",
+      image: "/seneger.jpg",
+    },
+    {
+      name: "Daiet",
+      description: "Sağlıklı yaşam ve beslenme konusunda yapay zeka ile diyetisyenlik hizmeti sunuyoruz.",
+      image: "/logo.webp",
     }
   ];
 
@@ -62,7 +72,7 @@ export default function Products() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+                className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 cursor-pointer"
                 onClick={() => {
                   let url = "";
                   switch (project.name) {
@@ -78,9 +88,16 @@ export default function Products() {
                     case "Hızır Vinç":
                         url = "https://www.hizirvinc.com";
                         break;
-                    case "Dedem Tur":
-                      url = "https://www.dedemtur.com";
-                      break;
+                      case "Dedem Tur":
+                        url = "https://www.dedemtur.com";
+                        break;
+                        case "Seneger Gıda":
+                          url = "https://www.senegergida.com";
+                          break;
+                    case "Daiet":
+                        url = "https://www.daiet.app";
+                        break;
+
                     default:
                       break;
                   }
